@@ -1,11 +1,7 @@
 import React from 'react';
 
 class button1 extends React.Component {
-
-    constructor(props) {
-        super(props);
-      }
-    
+  
 
     render() {
         return (
