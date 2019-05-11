@@ -7,7 +7,7 @@ class App extends React.Component {
     super(props);
     this.toggle = this.toggle.bind(this);
     this.select = this.select.bind(this);
-    this.useInformation = this.useInformation.bind(this);
+    this.printInformation = this.printInformation.bind(this);
     this.state = {
       dropdownOpen: false,
       value : "Home"
@@ -27,7 +27,7 @@ class App extends React.Component {
     });
   }
 
-  useInformation(){
+  printInformation(){
     console.log(this.state.value)
   }
 
@@ -42,7 +42,7 @@ class App extends React.Component {
         </DropdownMenu>
       </ButtonDropdown>
 
-      <button type="button" onClick={this.useInformation} class="btn btn-primary">Primary</button>
+      <button type="button" onClick={this.printInformation} class="btn btn-primary">Primary</button>
       </div>
     );
   }
