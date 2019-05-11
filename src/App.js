@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import { ButtonDropdown, DropdownMenu, DropdownItem, DropdownToggle } from 'reactstrap';
+import DropdownTest from "./dropdownTest"
 
 class App extends React.Component {
   constructor(props) {
@@ -34,15 +35,8 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-       <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-        <DropdownToggle>{this.state.value}</DropdownToggle>
-        <DropdownMenu>
-          <DropdownItem onClick={this.select}>Work</DropdownItem>
-          <DropdownItem onClick={this.select}>Contact</DropdownItem>
-        </DropdownMenu>
-      </ButtonDropdown>
-
-      <button type="button" onClick={this.printInformation} class="btn btn-primary">Primary</button>
+        <DropdownTest dropdownOpen={this.state.dropdownOpen} toggle={this.toggle} dropdownValue={this.state.value} selectedValue={this.select}/>
+        <button type="button" onClick={this.printInformation} class="btn btn-primary">Primary</button>
       </div>
     );
   }
