@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import { ButtonDropdown, DropdownMenu, DropdownItem, DropdownToggle } from 'reactstrap';
 import DropdownTest from "./dropdownTest"
 
 class App extends React.Component {
