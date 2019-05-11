@@ -3,14 +3,30 @@ import { ButtonDropdown, DropdownMenu, DropdownItem, DropdownToggle } from 'reac
 
 class dropdownTest extends React.Component {
 
+    constructor(props) {
+        super(props);
+        this.toggle = this.toggle.bind(this);
+        this.state = {
+          dropdownOpen: false,
+        };
+      }
+
+      toggle() {
+        this.setState({
+          dropdownOpen: !this.state.dropdownOpen
+        });
+      }
+    
+
     render() {
         return (
           <div >
-           <ButtonDropdown isOpen={this.props.dropdownOpen} toggle={this.props.toggle}>
+           <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
             <DropdownToggle>{this.props.dropdownValue}</DropdownToggle>
             <DropdownMenu>
-              <DropdownItem onClick={this.props.selectedValue}>Work</DropdownItem>
-              <DropdownItem onClick={this.props.selectedValue}>Contact</DropdownItem>
+                <DropdownItem onClick={this.props.selectedValue}>Home</DropdownItem>
+                <DropdownItem onClick={this.props.selectedValue}>Work</DropdownItem>
+                <DropdownItem onClick={this.props.selectedValue}>Contact</DropdownItem>
             </DropdownMenu>
           </ButtonDropdown>
     
